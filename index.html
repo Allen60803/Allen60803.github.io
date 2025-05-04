@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <title>期中作業網頁</title>
+        <meta charset="utf-8">
+        <style>
+        h2{
+        font:normal bold 30px/30px "Times New Roman","標楷體";
+        margin:25px 120px 0px 20px;
+        }
+        p{
+        margin:10px 120px 0px 20px;
+        }
+        a:link{
+        color:white;
+        text-decoration:none;
+        }
+        a:visited{
+        color:white;
+        text-decoration:none;
+        }
+        #a_side:hover{
+        color:darkblue;
+        transform:scale(1.1);
+        transition:0.5s;
+        font-size:110%
+        }
+        #a_side{
+        display:block;
+        height:60px;
+        line-height:60px;
+        text-align:center;
+        margin:40px 20px -20px;
+        background-color:skyblue;
+        border:1px black solid;
+        border-radius:10px;
+        }
+        .menu{
+        display:inline-block;
+        height:40px;
+        width:auto;
+        line-height:40px;
+        text-align:center;
+        font:normal bold 20px/20px "Times New Roman","標楷體";
+        color:gray;
+        margin:5px 0px 5px;
+        background-color:white;
+        border:1px gray solid;
+        border-radius:10px;
+        }
+        .menu:hover{
+        background-color:rgb(135, 228, 235);
+        }
+        .active{
+        height:46px;
+        background-color:rgb(135, 228, 235);
+        border-bottom:0px;
+        border-radius:10px 10px 0px 0px;
+        }
+        #header{
+        height:200px;
+        width:100%;
+        background-color:rgb(236, 236, 236);
+        text-align:center;
+        color:gray;
+        }
+        #sidebar{
+        height:805px;
+        width:15%;
+        float:right;
+        background-color:rgb(236, 236, 236);
+        text-align:center;
+        font:normal bold 20px/30px "Times New Roman","標楷體";
+        color:white;
+        margin:0 auto;
+        border:1px black solid;
+        }
+        #menu{
+        height:50px;
+        background-color:rgb(14, 75, 155);
+        float:both;
+        text-align:center;
+        font:normal bold 20px/55px "Times New Roman","標楷體";
+        border:1px black solid;
+        border-bottom:0px gray solid;
+        }
+        #body{
+        height:754px;
+        background-color:rgb(135, 228, 235);
+        text-align:left;
+        font:normal bold 24px/25px "Times New Roman","標楷體";
+        color:black ;
+        border:1px black solid;
+        border-top:1px gray solid;
+        }
+        #footer{
+        clear:both;
+        height:100px;
+        width:100%;
+        background-color:rgb(51, 51, 51);
+        text-align:center;
+        font:normal bold 15px/20px "Times New Roman","標楷體";
+        color:lightgray;
+        }
+        iframe{
+        display:block;
+        }
+        #text{
+        color:rgb(6,69,173);
+        }
+        #text:hover{
+        text-decoration:underline;
+        }
+        table{
+        margin:-10px 20px 20px 20px;
+        border:1px black solid;
+        background-color:black;
+        }
+        th,td{
+        text-align:center;
+        }    
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <img src="https://www.nttu.edu.tw/var/file/0/1000/img/nttulogo1.png"width="200px"height="44px"style="position:absolute;left:28%;top:95px">
+            <img src="https://i.ibb.co/2MBN60B/imgnttu.png"width="640px";height="160"style="position:absolute;left:40%;top:30px">
+        </div>
+        <div id="sidebar">
+        <a href="https://www.nttu.edu.tw/"target="blank"id="a_side">東大校網</a><br>
+        <a href="https://www.nttu.edu.tw/p/426-1000-6.php?Lang=zh-tw"target="blank"id="a_side">了解東大</a><br>
+        <a href="https://sec.nttu.edu.tw/"target="blank"id="a_side">秘書室</a><br>
+        <a href="https://aa.nttu.edu.tw/"target="blank"id="a_side">教務處</a><br>
+        <a href="https://wdsa.nttu.edu.tw/"target="blank"id="a_side">學務處</a><br>
+        <a href="https://dga.nttu.edu.tw/"target="blank"id="a_side">總務處</a><br>
+        <a href="form.html"target="blank"id="a_side">申請表</a><br>
+        </div>
+        <div id="menu">
+        <button class="menu"onclick="question1()">入學相關事務</button>
+        <button class="menu"onclick="question2()">面試建議與截止日期</button>
+        <button class="menu"onclick="question3()">學費與獎學金</button>
+        <button class="menu"onclick="question4()">宿舍住宿相關事務</button>
+        <button class="menu"onclick="question5()">個人申請簡章</button>
+        <button class="menu"onclick="question6()">學習歷程資料</button>
+        <button class="menu"onclick="question7()">學校地圖</button>
+        </div>
+        <div id="body">
+            <p id="content"></p>
+        </div>
+        <div id="footer">
+        <br><br>
+        網站負責人:何秉恩、謝秉倫<br>
+        學校電話(總機):089-318855<br>
+        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout&action&size&share=true&height=35&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+        <script>
+        function question1() {
+            document.getElementById("content").innerHTML = "<h2>入學資格：</h2><p>1.學科能力測驗考生選考五科，合計五十級分(含)以上者。 2.學科能力測驗考生選考四科，合計四十二級分(含)以上者。 3.經大學申請入學招生管道，同時正取本校及其他國立大學，以第一志願統一分發本校者。</p><h2>入學申請文件：</h2><p>依序填寫基本資料及學經歷資訊，網路報到完成 後，請列印學籍資料調查表及報到專用信封封面及高中（職）畢業證書影本或修業證明影本 1 份。</p>";
+        }
+        function question2() {
+            document.getElementById("content").innerHTML = "<h2>面試建議：</h2><p>儀容外表只是個門檻，禮節和儀態有基本的水準就好，資料要有條理容易閱讀才是重點。邏輯思考、語文表達、主動積極的態度非常重要，因為在面試的問答之中，教授們可以從中找到證據，測知學生的基本能力水平。</p><h2>面試截止日期</h2><p>錄取生(含正、備取)應於112年6月8日 至112年6月9日每日上午9時起至下午9時止至甄選委員會<a href='https://www.cac.edu.tw/apply112/rank.php' id='text' target='blank'>網路登記就讀志願序</a>。</p>";
+        }
+        function question3() {
+            document.getElementById("content").innerHTML = "<h2 >1.獎學金四十萬元：</h2><p>(1)學科能力測驗考生選考五科，合計六十五級分(含)以上者。<br>(2)學科能力測驗考生選考四科，合計五十三級分(含)以上者。</p><h2>2.獎學金二十五萬元：</h2><p>(1)學科能力測驗考生選考五科，合計六十級分(含)以上者。<br>(2)學科能力測驗考生選考四科，合計四十九級分(含)以上者。</p><h2>3.就讀臺東、花蓮縣境內高中職畢(結)業者，另再發給獎學金二萬元。</h2><h2>4.本款各目獎學金於入學後二年內分四個學期給付，二年內若前一學期學業成績未達該班前三名者，取消當學期得獎資格。</h2>";
+        }
+        function question4() {
+            document.getElementById("content").innerHTML = "<h2>住宿和生活：</h2><p><u>宿舍介紹</u>：本校知本學苑學生宿舍分別有第一學生宿舍(1,133)床及第二學生宿 舍(1,014 床)與忠孝樓(120 床)提供學生申請住宿。為建立大一新生健康作息、儘快融入團體生活並培養合作精神，除具有身心障礙身分（肢體障礙類別）或具醫療 證明不宜住宿上舖外，一律申請住宿四人房，大一新生優先入住第二學生宿舍。申請住宿前，請務必詳閱本校學生宿舍管理辦法、知本學苑學生宿舍公約與住宿申請公告，詳見本校學務處宿舍網頁。<br><u>宿舍進出管制時間及斷網</u>：「第一學生宿舍」、「忠孝樓」為一般宿舍，進出管制時 間為凌晨 1 時至 5 時不能外出。「第二學生宿舍」為健康宿舍，進出管制時間為晚 上 12 時至凌晨 6 時不能外出，另夜間將斷網(01:00 時至 06:00 時）及熄大燈(00:00 時至 06:00 時)。進出管制期間住宿生如有早離需求，請至宿舍行政辦公室提出申請。<br><u>學期住宿費用</u>： 1.四人房：10,125 元，電費另計。 2.二人房：15,750 元，電費另計。新生線上申請宿舍時間：8 月 1 日(二)10:00~8 月 19 日(六)23:59。 1.請新生依本校註冊組訂定報到梯次，先完成線上報到程序後(分科測驗分發入學新 生，請依公告時間上網報到之後)，連結至<a href='https://infosys.nttu.edu.tw' id='text' target='blank'>校務系統</a>申請 住宿，逾期未申請者視同放棄住宿。 2.如有其他需求，可在申請時於備註欄上註明以供參考。如有疑問請洽生活輔導組宿 舍行政人員，宿舍信箱：dorm@gm.nttu.edu.tw，聯絡電話：(089)518260～265。</p>";
+        }
+        function question5() {
+            document.getElementById("content").innerHTML = "<h1 style='margin:25px 0px 0px 15px'>臺東大學資訊工程系：</h1><h2>113年個人申請</h2><p style='margin-bottom:20px'>代碼&emsp;&emsp;<a href='https://www.cac.edu.tw/apply113/system/ColQry_vforStu113apply_GF84ad9zx/html/113_038142.htm?v=1.0' id='text' target='blank'>038142</a></p><p style='margin-bottom:20px''>學測申請標準：</p><table><tr style='background-color:white'><th>&emsp;&emsp;</th><th>國文</th><th>英文</th><th>數A</th><th>數B</th><th>社會</th><th>自然</th><th>英聽</th></tr><tr style='background-color:rgb(202, 225, 249);'><th>113年</th><td>--</td><td>--</td><td>底標</td><td>--</td><td>--</td><td>--</td><td>--</td></tr><tr style='background-color:lightgray;'><th>112年</th><td>--</td><td>--</td><td>底標</td><td>--</td><td>--</td><td>--</td><td>--</td></tr></table><p style='margin-bottom:20px''>篩選倍率：</p><table><tr style='background-color:white'><th>&emsp;&emsp;</th><th>國文</th><th>英文</th><th>數A</th><th>數B</th><th>社會</th><th>自然</th><th>相加項</th></tr><tr style='background-color:rgb(202, 225, 249);'><th>113年</th><td>--</td><td>5</td><td>4</td><td>--</td><td>--</td><td>--</td><td>3(英數A)</td></tr><tr style='background-color:lightgray;'><th>112年</th><td>--</td><td>5</td><td>4</td><td>--</td><td>--</td><td>--</td><td>3(英數A)</td></tr></table><p style='margin-bottom:20px''>112年篩選結果：</p><table><tr style='background-color:white'><th>篩選一</th><th>篩選二</th><th>篩選三</th><th>超額篩選</th></tr><tr style='background-color:rgb(202, 225, 249)'><td>英=6</td><td>數A=6</td><td>英+數A=15</td><td>有</td></tr></table><p>詳細申請資訊：</p><ul style='list-style-type:disc'><li><a href='https://www.cac.edu.tw/apply113/system/ColQry_vforStu113apply_GF84ad9zx/html/113_038142.htm?v=1.0' id='text' target='blank'>國立臺東大學資訊工程學系個人申請校系分則詳細資料</a></li><li><a href='https://www.cac.edu.tw/mobile_apply113/colqry6_apply_mT29dYs8/m_ComData.php?ColNo=038' id='text' target='blank'>國立臺東大學個人申請共通說明事項</a></li><ul><p style='margin-left:-60px;'>";
+        }
+        function question6() {
+            document.getElementById("content").innerHTML = "<h2 style='margin-bottom:50px;margin-top:40px'>國立台東大學-資訊工程學系:</h2><img src='https://i.imgur.com/1J6O1hc.png' border='1' style='margin-left:20px;height:544px;width:1105px'>"
+        }
+        function question7() {
+            document.getElementById("content").innerHTML = "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.7731936616883!2d121.06731507536003!3d22.736669979375208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fb78ddb02e7d9%3A0x916d099a92cec938!2z5Y-w5p2x5aSn5a2455-l5pys5qCh5Y2A!5e0!3m2!1szh-TW!2stw!4v1702487170436!5m2!1szh-TW!2stw' width='1120' height='650' style='border:0;margin:50px 0px 0px 13px' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>";
+        }
+        </script>
+        <script>
+        const menuElList = document.querySelectorAll(".menu");
+        menuElList.forEach(menuEl => {
+            menuEl.addEventListener('click', () => {
+            document.querySelector('.active')?.classList.remove('active');
+            menuEl.classList.add('active');
+            });
+        });
+        </script>
+    </body>
